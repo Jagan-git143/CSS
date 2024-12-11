@@ -1,0 +1,26 @@
+position: it is usd to keep an element at different places on the web page
+There are five types of positions available in CSS:
+    they are:
+        1.static
+        2.absolute
+        3.relative
+        4.fixed 
+        5.sticky
+
+Static: by default, every element contains "static" position and it will not have any impact of top, left, right, bottom
+
+relative: relative will move the element based on its previous position, we can consider top,left,right,bottom such that element moves acoording to its current position.
+
+position:absolute will move the elements based on body, it consider top,left,right,bottom,with respect to  body
+
+fixed: it will move the element based on body , it considers top,left,lright,bottom with repect to body but scrolling will not have any impact on these elements
+
+sticky: it is similar to fixed but it gets fixed after specific condition or specific top,left,bottom,right width matchs and it stays until its parent stays
+
+
+
+
+
+
+
+

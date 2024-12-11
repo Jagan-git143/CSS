@@ -1,0 +1,266 @@
+CSS(cascading style sheets) is used to design/style the web page. They were introduced in 1994.
+To design a website well,
+we need to concentrate three things:
+   -- eye-friendly colours
+   -- fonts
+   -- layout
+
+1. How to Link CSS to HTML?
+We can link CSS to HTML in three ways
+  i. inline CSS:
+     we can apply styles in html elements opening tag , style as a attribute.
+     <h1 style="background-color: aqua;color: red;">
+        Happy Children's Day
+    </h1>
+    /* create paragraph that says happy Children's day 
+    and apply inline css for background-color and color properties */
+  ii. Internal CSS:
+    we can apply styles to any element/elements using 
+    style as a element
+    syntax: 
+    selector
+    {
+       //properties
+    }
+eg:<style>
+        h1
+        {
+          background-color: blue;
+          color: white;
+        }
+    </style>
+/* create 4 paragraphs with some dummy data and apply same background-color and color properties to all paragraphs using internal CSS */
+
+iii. External CSS:
+we can create separate CSS file and attach to HTML using link tag.
+<link rel="stylesheet" href="./style.css">
+
+Inline >!important> Internal = External(mostly External dominates Internal)
+!important will be added to properties values such that its preference will be higher level
+eg: h1{
+            background-color: green !important;
+        }
+      
+
+Basic Selectors:
+Selectors are used to identify an element of HTML in CSS
+You can identify an element basically in three ways
+  i. tag: we can define properties using tags so that
+  all elements with that tag will be selected
+  ii. classname: if we need to select few elements, we can assign same class name to all and identify the class name
+  in CSS using dot notation
+  eg: <h1 class="myClass">Hello World</h1>
+  <style>
+    .myClass{
+      color:red;
+    }
+    </style>
+   iii. idname: if we need to select only one element, we can use id . we can identify id in css by using # notation.
+    eg: <h1 id="something">Hello World</h1>
+  <style>
+    #something{
+      color:red;
+    }
+    </style>
+   Note: An element might contain multiple class names and multiple element might contain same class name. id's are always unique
+
+   id>class>tag
+
+Combinators:
+direct-child(>): we can identify an element direct child
+ using >
+descendant(' ') : we can identify an element using space combinator for descendants
+Eg: div>h1 means h1 which is direct child of div
+div h1 means h1 which is descendant of div
+Adjacent sibling selector(+):
+we can identify an element which comes right after another 
+element using '+'
+General Sibling Selector(~):
+we can identify an element which comes after an element 
+using ~
+
+Backgrounds:
+       we can define background as a color or as an image.
+background-color: This property is used to set background color and In CSS, colour can be denoted as 
+    I. By name: code editor provides basic color name suggestion
+  II. By Hexcode: Every colour will have a hexadecimal code starts with #
+       like #c93a09
+  III. RGB: we can define any color as a mixture of red,green,blue where each color have range from 0 to 255
+  IV. HSL : we can define any color as Hue,Saturation and lightness.
+   Hue is a degree of color from 0 to 359, saturation and lightness are 0 to 100%
+  we can also define different shades using alpha ranges from 0.0 to 1.0
+
+  gradients:
+      we can mix colours by gradients and we can define gradients using background property
+  1. linear-gradient: it mixes colors in a line
+  2. radial-gradient: it mixes colors in circular way
+  background: linear-gradient/radial-gradient
+
+background-image:
+we can assign images to background by using background-image with url
+   background-image : url('path')
+   background-position: top/bottom/center/left/right;
+   background-size:auto/cover/contain
+   background-repeat: repeat/round/space/repeat-x/repeat-y/no-repeat
+
+Fonts: 
+A Good Design Contains a better font and there are 5 different font families are existed
+  I. serif  : serif fonts will have a stroke at the end
+                 Eg: Times new Roman
+II. sans-serif : sans-serif literally means no-serif. they will not have any stroke
+                 Eg: Arial
+III. monospace: monospace fonts will have same height and gap
+                Eg: roboto
+IV. cursive:   cursive fonts are stylish,sleeps,connected
+ V. modern/fantasy: all modern fonts which  doesn't belong above are modern/fantasy 
+you can include fonts from google fonts,1001fonts,dafont
+
+Import google fonts using @import url('') in css
+font-size: we can use it to assign size
+font-weight: used to assign thickeness(bold/boder/100-1000)
+font-style: used to assign style (normal/italic/oblique)
+font-family: used to mention the font family
+text-align: center/left/right/justify
+text-decoration-line: underline/overline/line-through/none
+text-decoration:dotted/solid/dashed/wavy/double
+text-shadow:size1 size2 color
+
+units: units are used to assign certain sizes
+px- pixels(smallest unit)
+em- enumerated value(1 em = 1 time of parent's font size)
+rem - root enumerated value( 1 rem = 16px)
+vw- viewport width(10vw- 10% of visible width)
+vh- viewport Height(10vw- 10% of visible Height)
+% - used to define different %
+
+Box Model: 
+      In CSS, Every element is treated as a Box. A Box Typically Contains 
+     I. Border: border is used to outline any element. we can define border as      border: border-width border-style border-color;
+we can  also specify different borders such as border-left, border-right, border-bottom, border-top;
+      To achieve corner radius, we use border-radius:size;
+we can also assign border-top-left-radius,border-top-right-radius,
+border-bottom-left-radius,border-bottom-right-radius
+     II. Margin: Margin is the space outside the border.
+   we can use margin-top,margin-bottom,margin-left,margin-right,
+   margin: 10px will assign 10px to all sides
+   margin: 10px 20px will assign 10px to top and bottom and 20px to left and right
+   margin: 10px 20px 30px 40px will assign respective sides starting from top to left in clock wise direction
+     III. padding: we can also assign padding similar to margin. padding is the gap between border and content(internal space)
+
+
+By default , every box sizes as content-box. If padding is given, it might increase height and width of box.
+if you do not want to change height / width by padding, you can use
+box-sizing: border-box
+
+Pseudo Selectors are used to select an element based on state or position of the element
+There are two types of pseudo selectors i.e.,
+ i. pseudo classes
+ ii. pseudo elements
+Pseudo elements:
+   Pseudo elements uses double colon for its presence
+   1.::first-line: first line is used to select the first line of the element
+   2.::first-letter: first letter is used to select the first letter of the element
+   3.::after: it is used to keep certain content after the element
+   4.::before: it is used to place certain content before the element
+   5.::placeholder: it is used to select the placeholder of input elements
+
+  pseudo classes:
+  these selectors uses single colon
+  i. :hover : it is used to select an element whenever we keep mouse over the element
+  ii. :required : it is used to select an element when it is required
+  iii. :optional : it is used to select an input element when it is not required
+  iv. :active : it is used to select an anchor tag when it is active
+  v. :link : it is used to select a link in original state
+  vi :visited : it is used to select a link if it is already visited
+  vii. :disabled : it is used to select an input element when it is disabled
+  viii. :enabled :it is used to select an input element when it is not disabled
+  ix. :read-only : it is used to select an input element when it is readonly
+  x. :read-write : it is used to select an input element when it is not read-write
+  xi. :first-child: it is used to select an element if it is first
+  xii. :last-child; it is used to select an element if it is the last
+  xiii. :nth-child(position): it is used to select an element based on its position number 
+  xiv. :nth-last-child(position): it is used to select an element based on its position number from last
+  xv. :nth-of-type(position): it is used to select an element based on its position number and type of the element
+  xvi. :nth-of-last-type(position): it is used to select an element based on its position number and type of the element from the last
+  xvii. :not : it is used to select the element except certain element
+
+  1. float in CSS
+The float property is used to position elements to the left or right of their container and allow other elements (like text) to flow around them.
+
+Values of float:
+none: Default value. The element does not float.
+left: The element floats to the left of its container.
+right: The element floats to the right of its container.
+inherit: The element inherits the float value of its parent.
+Example:
+<div style="float: left; width: 100px; height: 100px; background-color: lightblue;">
+    I am floated left.
+</div>
+<p>This text flows around the floated box.</p>
+Common Issues with float:
+Floated elements are removed from the normal document flow, which can cause parent containers to collapse if they don’t account for the height of the floated elements.
+Clearing Floats:
+To fix layout issues caused by float, you can use the clear property:
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+Apply .clearfix to the container of floated elements.
+
+2. display Property in CSS
+The display property determines how an element is displayed in the document.
+
+Common Values of display:
+block
+inline
+inline-block
+display: block
+Block-level elements occupy the full width of their parent container and start on a new line.
+Examples of block-level elements: <div>, <p>, <h1>.
+Key Characteristics:
+Takes up the full width of its parent container.
+Starts on a new line (other elements appear below it).
+Example:
+<div style="display: block; background-color: lightcoral;">
+    I am a block element.
+</div>
+<div style="display: block; background-color: lightblue;">
+    I am another block element.
+</div>
+display: inline
+Inline elements do not start on a new line. They only take up as much width as necessary.
+Examples of inline elements: <span>, <a>, <strong>.
+Key Characteristics:
+Only takes as much width as the content inside it.
+Does not accept width and height properties (these are ignored).
+Example:
+<span style="display: inline; background-color: lightgreen;">I am inline</span>
+<span style="display: inline; background-color: lightpink;">I am next to you</span>
+display: inline-block
+Combines characteristics of both block and inline:
+It behaves like inline (does not start a new line).
+It behaves like block (you can set width and height).
+Key Characteristics:
+Does not start a new line.
+Accepts width and height.
+Example:
+<span style="display: inline-block; width: 100px; height: 50px; background-color: lightblue;">
+    I am inline-block.
+</span>
+<span style="display: inline-block; width: 100px; height: 50px; background-color: lightcoral;">
+    I am next to you.
+</span>
+When to Use These Properties
+block: Use for large structural elements like sections, articles, or containers.
+inline: Use for text styling, links, or elements that flow naturally with text.
+inline-block: Use when you want elements side-by-side but still able to set dimensions.
+Combining float and display
+Floats and display values are often used together for layouts. For example:
+
+<div style="float: left; display: block; width: 50%; background-color: lightblue;">
+    I am floated and take 50% of the width.
+</div>
+<div style="float: right; display: block; width: 50%; background-color: lightcoral;">
+    I am floated to the right.
+</div>

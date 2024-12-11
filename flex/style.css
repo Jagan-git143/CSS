@@ -1,0 +1,41 @@
+.maindiv{
+    height: 500px;
+    width: 500px;
+    border: 1px solid red;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-between; 
+    align-items: center;
+   /* gap: ; */
+    
+}
+.item{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    font-size: 32px;
+    color: white;
+    border: 1px solid; 
+}
+
+.item2{
+    flex-grow: 3;
+}
+
+.item3{
+    flex-basis: 200px;
+}
+
+.item4{
+   /* align-self: ; */
+    order: 1;
+    flex-shrink: 2;
+}
+.item7{
+    order:5;
+}
+
+.item{
+    order:-6;
+}

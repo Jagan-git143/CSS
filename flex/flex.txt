@@ -1,0 +1,31 @@
+Flex box: ti is used to display or arrnage the elements/items in single direction i,e direction it follows either row is horizontal direction and coloum is vrtical one
+we can define the flexproperty to the parent or container such that all the child items will be arrganed in row or coloum
+
+Display flex: it define the container as flexbox
+
+Flex-direction: row/coloum/row-reverse/coloum-reverse(by default row will be selected, it is also called "main axis", it is used to arrange elemets in particular direction)
+
+Justify-content:left/right/start/end/center/space-between/sapce-around/space-evenly/(used to move around items around the main-axis)
+
+Align-items:start/end/center/left/right(used to move items around cross-axis---opposite of main axis) is main row coloumaxis.
+
+flex-wrap:wrap/nowrap/wrap-reverse(used to wrapup items in multi row or multi-column)
+
+Align-content:it is used to arrange multo-row,or column
+
+gap: it is used to gap between elemets
+----these are all parent properties
+
+
+Child-properties:
+justify-self:it is used to move element along main axis
+
+align-self: used to move element in cross axis
+
+order:it is used to arrnage oredr(default value is zero)
+
+flex-grow:it used to make an elemnt grow more than other
+
+flex-shrink: it is used to make elemnt shrink more than other
+
+flex-basis:used to keep same width for an element
