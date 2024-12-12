@@ -4,7 +4,7 @@ body{
     color: white;
 }
 #about{
-    background-color: rgba(240, 248, 255, 0.155);
+    background-color: rgb(164, 103, 103);
     font-size: 20pxpx;
     padding-top: 20px;
     display: flex;
@@ -12,6 +12,8 @@ body{
     margin: auto;
     max-width: 1280px;
     gap: 20px;
+    font-size: 1.25rem;
+    font-style:serif;
 }
 p{
     text-align: justify;
@@ -25,13 +27,13 @@ p{
 .education,.languages,.strengths{
     padding: 20px;
     box-shadow: 2px 3px #2f2e2e;
-    border-radius: 20px;
+    border-radius: 10px;
 
 }
 .right img{
-    height: 300px;
-    width:300px;
-    clip-path:circle(120px);
+    height: 400px;
+    width:400px;
+    clip-path:circle(150px);
 }
 #skills{
    
@@ -45,11 +47,16 @@ p{
     box-shadow: 2px 3px black;
     
 }
-#skills img{
-    border:3px solid rgb(136, 237, 136);
+#skills img{:
+    border:2px solid rgb(149, 66, 66);
     height: 120px;
     width: 150px;
+    gap: 10px;
 }
+ 
+
+
+
 /* pcs */
 @media (min-width:769px) and (max-width:1280px){
 

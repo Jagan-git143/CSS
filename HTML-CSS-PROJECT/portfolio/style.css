@@ -101,18 +101,18 @@ text-align: justify;
 
 }
 .box .l{
-    width: 100px;
-    height: 40px;
-    color: black;
+    width: 0px;
+    height: 0px;
+    color:#081b29;
 
     
     
     /* border: 1px solid brown; */
 }
 .box .r{
-    width: 100px;
-    height: 40px;
-    color: #00abf0;
+    width: 0px;
+    height: 0px;
+    color:#081b29;
     /* border: 1px solid brown; */
 }
 
@@ -121,7 +121,7 @@ text-align: justify;
     justify-content: center;
     align-items: center;
     
-    border: 1px solid  #fafeff ;
+    border: 0px solid  #fafeff ;
     text-decoration: none;
     
     border-radius: 10px;
@@ -131,9 +131,9 @@ text-align: justify;
 .box .B:hover,
 .box .l{
     color:black;
-    background-color: #00abf0;
-    transition: all .5s linear ;
-    font-size: 20px
+    background-color: black;
+    transition: all .1s linear ;
+    font-size: 0px
 
 }
 .icons{
@@ -174,12 +174,12 @@ text-align: justify;
     align-items: center;
 }
 .ring-light {
-    width: 350px; /* Set image size */
-    height: 350px;
-    border-radius: 50%; /* Make it circular */
+    width: 380px; /* Set image size */
+    height: 380px;
+    border-radius: 60%; /* Make it circular */
     border: 10px solid #fff; /* Optional border */
-    box-shadow: 0 0 20px 10px rgba(0, 128, 255, 0.8), /* Outer glow */
-                0 0 40px 20px rgba(0, 128, 255, 0.6); /* Extra glow */
+    box-shadow: 0 0 20px 10px rgba(18, 99, 180, 0.9), /* Outer glow */
+                0 0 40px 20px rgba(18, 99, 180, 0.9); /* Extra glow */
     overflow: hidden; /* Ensure the image stays inside */
   }
 
